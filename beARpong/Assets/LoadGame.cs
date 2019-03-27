@@ -17,5 +17,9 @@ public class LoadGame : MonoBehaviour
         
     }
 
-    public void ChangeScene() { SceneManager.LoadScene("SampleScene"); }
+    public void ChangeScene() 
+    { 
+        // SceneManager.LoadScene("SampleScene"); 
+        SceneManager.LoadScene("Scene1"); 
+    }
 }
