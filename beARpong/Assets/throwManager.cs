@@ -8,21 +8,18 @@ public class throwManager : MonoBehaviour {
 	private Vector3 startPos; //mouse slide movement start pos
 	private Vector3 endPos; //mouse slide movement end pos
 	private bool isThrown;
-	private bool preThrow;
+	private bool notThrown;
 	public float mult = 5f;
 
-	[SerializeField] private GameObject imgTgt;
-	[SerializeField] private GameObject ballSpawn;
 	[SerializeField] private GameObject ball;
 
 	void Start(){
 		isThrown=false;
-		preThrow=true;
+		notThrown=true;
 	}
 
 	void Update () 
 	{
-		Debug.Log(imgTgt.transform.position-ballSpawn.transform.position);
 		if (Input.GetKeyDown(KeyCode.R)) {
 			SceneManager.LoadScene ("Scene1"); // Reset scene on pressing R
 		}
@@ -31,6 +28,10 @@ public class throwManager : MonoBehaviour {
 			return; //prevent user from accesing ball after being thrown
 		}
 
+		if(notThrown){
+			ball.GetComponent<Rigidbody>().isKinematic = false;
+			ball.GetComponent<Rigidbody>().useGravity = false;
+		}
 
 		if (Input.GetMouseButtonDown (0)) {
 			//get start mouse position
@@ -39,7 +40,7 @@ public class throwManager : MonoBehaviour {
 			startPos = Camera.main.ScreenToWorldPoint(mousePos);
 
 			//Print start Pos for debugging
-			Debug.Log (startPos);
+			Debug.Log ("startpos"+startPos);
 		}
 
 		if(Input.GetMouseButtonUp(0))
@@ -49,24 +50,48 @@ public class throwManager : MonoBehaviour {
 			Vector3 mousePos = Input.mousePosition *-1.0f;
 
 			// convert mouse position to world position
-			// endPos= Camera.main.ScreenToWorldPoint(mousePos);
-			// endPos.z = Camera.main.nearClipPlane; //removing this breaks stuff,no idea why though
-			preThrow = false;
+			endPos= Camera.main.ScreenToWorldPoint(mousePos);
+			endPos.z = Camera.main.nearClipPlane; //removing this breaks stuff,no idea why though
+			notThrown = false;
 			//Print start Pos for debugging
-			Debug.Log (endPos);
+			Debug.Log ("endpos"+endPos);
 
 			Vector3 throwDir = this.transform.forward;//get throw direction based on start and end pos
-
-			this.gameObject.GetComponent<Rigidbody> ().AddForce (throwDir*(startPos - endPos).sqrMagnitude*mult);//add force to throw direction*magnitude
+			ball.GetComponent<Rigidbody>().isKinematic = true;
+			ball.GetComponent<Rigidbody>().useGravity = true;
+			ball.gameObject.GetComponent<Rigidbody> ().AddForce (throwDir*(startPos - endPos).sqrMagnitude*mult);//add force to throw direction*magnitude
 
 			isThrown = true;
 			
 		}
+		// Debug.Log(Input.touchCount);
+		// if(Input.touchCount > 0){
+		// 	Debug.Log("FOUND");
+		// 	if(Input.GetTouch(0).phase == TouchPhase.Began){
+		// 		Vector3 mousePos = Input.GetTouch(0).position;
 
-		if(preThrow){
-			ball.transform.position = ballSpawn.transform.position;
-		}
+		// 		startPos = Camera.main.ScreenToWorldPoint(mousePos);
 
+		// 		//Print start Pos for debugging
+		// 		Debug.Log ("startpos"+startPos);
+		// 	}
+		// 	if(Input.GetTouch(0).phase == TouchPhase.Ended){
+		// 		Vector3 mousePos = Input.mousePosition *-1.0f;
+
+		// 		// convert mouse position to world position
+		// 		endPos= Camera.main.ScreenToWorldPoint(mousePos);
+		// 		notThrown = false;
+		// 		//Print start Pos for debugging
+		// 		Debug.Log ("endpos"+endPos);
+
+		// 		Vector3 throwDir = this.transform.forward;//get throw direction based on start and end pos
+		// 		ball.GetComponent<Rigidbody>().isKinematic = true;
+		// 		ball.GetComponent<Rigidbody>().useGravity = true;
+		// 		this.gameObject.GetComponent<Rigidbody> ().AddForce (throwDir*(startPos - endPos).sqrMagnitude*mult);//add force to throw direction*magnitude
+
+		// 		isThrown = true;
+		// 	}
+		// }
 	}
 
 }
