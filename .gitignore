@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+beARpong/Assets/Scenes/TRAILER.unity
+beARpong/Assets/Scenes/TRAILER.unity.meta
+beARpong/Assets/trailer.cs
+beARpong/Assets/trailer.cs.meta
