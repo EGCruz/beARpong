@@ -19,6 +19,7 @@ public class LoadGame : MonoBehaviour
 
     public void ChangeScene() 
     { 
+        Time.timeScale = 1;
         // SceneManager.LoadScene("SampleScene"); 
         SceneManager.LoadScene("Scene1"); 
     }
