@@ -17,6 +17,8 @@ public class throwScript : MonoBehaviour {
     // [SerializeField]
     // Transform farCup;
 
+	public GameObject ball;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
@@ -53,8 +55,10 @@ public class throwScript : MonoBehaviour {
             rb.AddForce(0,100f,throwForceInZ / timeInterval);
 			//rb.AddForce (0, - direction.y * throwForceInXandY, throwForceInZ / timeInterval);
             //rb.AddForce(camTransform.forward*direction.sqrMagnitude);
+
 			// Destroy ball in 4 seconds
-			Destroy (gameObject, 3f);
+			// Destroy (gameObject, 3f);
+			
 		}
 
         if(Input.GetMouseButtonDown (0)){
@@ -68,5 +72,12 @@ public class throwScript : MonoBehaviour {
             rb.isKinematic = false;
             rb.AddForce(0,100f,throwForceInZ / timeInterval);
         }
+	}
+
+	public void Reset()
+	{
+		rb.isKinematic = true;
+		ball.transform.position = new Vector3(0.0f,0.659f,-1.623f);
+		ball.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
 	}
 }
