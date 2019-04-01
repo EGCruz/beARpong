@@ -77,7 +77,8 @@ public class throwScript : MonoBehaviour {
 	public void Reset()
 	{
 		rb.isKinematic = true;
-		ball.transform.position = new Vector3(0.0f,0.659f,-1.623f);
-		ball.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
+		// ball.transform.position = new Vector3(0.0f,-0.12f,0.383f);
+		ball.transform.localPosition = new Vector3(0.0f,-0.12f,0.383f);
+		ball.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
 	}
 }
