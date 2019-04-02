@@ -26,23 +26,39 @@ public class throwScriptv3 : MonoBehaviour {
         originalPos = ball.transform.position;
     }
 
-    void FixedUpdate(){
-        if(Input.GetMouseButtonDown (0)){
-            Debug.Log("Begin");
+    void Update(){
 
-            startSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
-            Debug.Log(startSwipe);
+        if (Input.GetMouseButtonDown (0) && rb.isKinematic == true){
+            
+                scoreValue++;
+                scoreText.text = "Attempts: " + scoreValue.ToString();
+                scoreText2.text = "Attempts: " + scoreValue.ToString();
+            
         }
-        if (Input.GetMouseButtonUp (0)){
-            endSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
-            Vector2 swipe = startSwipe - endSwipe;
-            Debug.Log("End");
-            Debug.Log(swipe.y);
-            if(Math.Abs(swipe.y) > 0){
-                Launch();
+    }
+
+    void FixedUpdate(){
+
+        if(rb.isKinematic == true)
+        {
+            if(Input.GetMouseButtonDown (0)){
+                Debug.Log("Begin");
+
+                startSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
+                Debug.Log(startSwipe);
             }
-            StartCoroutine(ResetAfterTime(2.5f));
+            if (Input.GetMouseButtonUp (0)){
+                endSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
+                Vector2 swipe = startSwipe - endSwipe;
+                Debug.Log("End");
+                Debug.Log(swipe.y);
+                if(Math.Abs(swipe.y) > 0){
+                    Launch();
+                }
+                StartCoroutine(ResetAfterTime(2.5f));
+            }
         }
+        
     }
 
     void Launch(){
@@ -62,9 +78,9 @@ public class throwScriptv3 : MonoBehaviour {
         rb.AddForce (xforce, 100f, zforce, ForceMode.Force);
         Debug.Log("xForce="+xforce+", zForce="+zforce);
 
-	        scoreValue++;
-	        scoreText.text = "Attempts: " + scoreValue.ToString();
-	        scoreText2.text = "Attempts: " + scoreValue.ToString();
+	        // scoreValue++;
+	        // scoreText.text = "Attempts: " + scoreValue.ToString();
+	        // scoreText2.text = "Attempts: " + scoreValue.ToString();
     	
     }
 
