@@ -45,24 +45,32 @@ public class throwScriptv2 : MonoBehaviour {
 			// add force to balls rigidbody in 3D space depending on swipe time, direction and throw forces
 			rb.isKinematic = false;
             rb.AddForce(0,100f,throwForceInZ / timeInterval);
+			StartCoroutine(ResetAfterTime(2f));
 			
-		
-
-        if(Input.GetMouseButtonDown (0)){
-            Debug.Log("Mouse Down");
-            touchTimeStart = Time.time;
-        }
-        if(Input.GetMouseButtonUp(0)){
-            Debug.Log("Mouse Up");
-            touchTimeFinish = Time.time;
-            timeInterval = touchTimeFinish - touchTimeStart;
-            rb.isKinematic = false;
-            rb.AddForce(0,100f,throwForceInZ / timeInterval);
-        }
+        // if(Input.GetMouseButtonDown (0)){
+        //     Debug.Log("Mouse Down");
+        //     touchTimeStart = Time.time;
+        // }
+        // if(Input.GetMouseButtonUp(0)){
+        //     Debug.Log("Mouse Up");
+        //     touchTimeFinish = Time.time;
+        //     timeInterval = touchTimeFinish - touchTimeStart;
+        //     rb.isKinematic = false;
+        //     rb.AddForce(0,100f,throwForceInZ / timeInterval);
+        // }
 	}
 
 	public void Reset()
 	{
+		rb.isKinematic = true;
+		// ball.transform.position = new Vector3(0.0f,-0.12f,0.383f);
+		ball.transform.localPosition = new Vector3(0.0f,-0.12f,0.383f);
+		ball.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+	}
+
+	public IEnumerator ResetAfterTime(float passtime){
+		yield return new WaitForSeconds(passtime);
+		Debug.Log("Reset");
 		rb.isKinematic = true;
 		// ball.transform.position = new Vector3(0.0f,-0.12f,0.383f);
 		ball.transform.localPosition = new Vector3(0.0f,-0.12f,0.383f);
