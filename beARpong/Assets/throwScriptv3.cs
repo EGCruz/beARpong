@@ -17,24 +17,28 @@ public class throwScriptv3 : MonoBehaviour {
     public static int scoreValue=0;
 	public Text scoreText;
     public Text scoreText2;
-
+	public int shoot=0;
     public GameObject ball;
 
     void Start(){
         scoreValue = 0;
+        shoot=0;
         // rb = GetComponent<Rigidbody>();
         originalPos = ball.transform.position;
     }
 
     void Update(){
 
-        if (Input.GetMouseButtonDown (0) && rb.isKinematic == true){
-            
-            scoreValue++;
-            scoreText.text = "Attempts: " + scoreValue.ToString();
-            scoreText2.text = "Attempts: " + scoreValue.ToString();
-            
-        }
+        if ((Input.GetMouseButtonDown (0) || Input.GetMouseButton (0)) && rb.isKinematic == true){
+    	shoot=1;
+		}
+            if (Input.GetMouseButtonUp (0) && rb.isKinematic == false && shoot==1){
+                scoreValue++;
+                scoreText.text = "Attempts: " + scoreValue.ToString();
+                scoreText2.text = "Attempts: " + scoreValue.ToString();
+                shoot=0;
+     		}
+        
     }
 
     void FixedUpdate(){
@@ -78,9 +82,9 @@ public class throwScriptv3 : MonoBehaviour {
         rb.AddForce (xforce, 100f, zforce, ForceMode.Force);
         Debug.Log("xForce="+xforce+", zForce="+zforce);
 
-        // scoreValue++;
-        // scoreText.text = "Attempts: " + scoreValue.ToString();
-        // scoreText2.text = "Attempts: " + scoreValue.ToString();
+	        // scoreValue++;
+	        // scoreText.text = "Attempts: " + scoreValue.ToString();
+	        // scoreText2.text = "Attempts: " + scoreValue.ToString();
     	
     }
 
