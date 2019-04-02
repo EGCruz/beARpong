@@ -4,26 +4,40 @@ using UnityEngine;
 using UnityEngine.UI;
 public class basket : MonoBehaviour
 {
-	public static int scoreValue=0; //reference to the ScoreText gameobject, set in editor
-
-	public Text scoreText;
+	private static int cups=0; 
+    public GameObject canvas1;
+    public GameObject winCanvas;
+	// public Text scoreText;
 	
 	//public Text text;
     
     void Awake()
     {
-        scoreText.text = "Score: 0";
+        // scoreText.text = "Score: 0";
+        
+    }
+
+    void Start()
+    {
+        // scoreText.text = "Score: 0";
+        cups=0;
     }
 
 	void OnCollisionEnter() //if ball hits board
     {
-         scoreValue++;
-         Debug.Log(scoreValue);
-         scoreText.text = "Score: " + scoreValue.ToString();
-		 Destroy (transform.parent.gameObject);
-         Destroy (gameObject);
-        
-    }
- 
+        cups++;
+        Debug.Log(cups);
+        //  scoreText.text = "Score: " + scoreValue.ToString();
+        Destroy (transform.parent.gameObject);
+        Destroy (gameObject);
 
+        if(cups >= 10)
+        {
+            winCanvas.SetActive(true);
+            canvas1.SetActive(false);
+            Debug.Log("win");
+
+        }
+            
+    }
 }
