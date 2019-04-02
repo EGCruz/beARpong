@@ -11,7 +11,7 @@ public class throwManager : MonoBehaviour {
 	private bool notThrown;
 	public float mult = 5f;
 
-	[SerializeField] private GameObject ball;
+	public GameObject ball;
 
 	void Start(){
 		isThrown=false;
