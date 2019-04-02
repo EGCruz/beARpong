@@ -343,7 +343,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 37fc121a1a38a3148bda79c684b105e9, type: 3}
-    m_FontSize: 34
+    m_FontSize: 52
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -351,10 +351,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Score: N'
+  m_Text: 'Attempts: 0'
 --- !u!222 &142988345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -372,14 +372,14 @@ RectTransform:
   m_GameObject: {fileID: 142988343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7107409, y: 0.42488217, z: 0.4907904}
+  m_LocalScale: {x: 0.28306967, y: 0.27731857, z: 0.32033655}
   m_Children: []
   m_Father: {fileID: 1443460539}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 66.3, y: -14.5}
+  m_AnchoredPosition: {x: 66.3, y: -14.1}
   m_SizeDelta: {x: 160, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &146135633
@@ -441,7 +441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &146135637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1019,7 +1018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &305480639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1539,7 +1537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &660210484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2173,7 +2170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &784965034
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2298,7 +2294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &847071000
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2576,7 +2571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &1050985656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2783,7 +2777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &1162928422
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3001,7 +2994,7 @@ RectTransform:
   m_GameObject: {fileID: 1443460538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4537512, y: 2.0512, z: 2.0512}
+  m_LocalScale: {x: 2.1495159, y: 1.9027752, z: 1.9027752}
   m_Children:
   - {fileID: 142988346}
   m_Father: {fileID: 1070241190}
@@ -3009,7 +3002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -91}
+  m_AnchoredPosition: {x: 184, y: -91}
   m_SizeDelta: {x: 130, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443460540
@@ -3394,7 +3387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &1602176571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3614,6 +3606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ff18d8509df7742acef0a8684068a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 142988344}
   throwForceInZ: 35
   ball: {fileID: 1662969393}
   throwButton: {fileID: 1730482621}
@@ -3963,7 +3956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &1780675980
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4571,7 +4563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
 --- !u!23 &1979319257
 MeshRenderer:
   m_ObjectHideFlags: 0
