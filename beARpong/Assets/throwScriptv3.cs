@@ -27,23 +27,31 @@ public class throwScriptv3 : MonoBehaviour {
 
     void Update(){
         
-        if(Input.GetMouseButtonDown (0)){
-            Debug.Log("Begin");
+        if(ball.transform.position == originalPos)
+        {
+            Debug.Log("Ready to launch");
+            if(Input.GetMouseButtonDown (0)){
+                Debug.Log("Begin");
 
-            startSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
-            Debug.Log(startSwipe);
-        }
-
-        if (Input.GetMouseButtonUp (0)){
-            endSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
-            Vector2 swipe = startSwipe - endSwipe;
-            Debug.Log("End");
-            Debug.Log(swipe.y);
-            if(Math.Abs(swipe.y) > 0){
-                Launch();
+                startSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
+                Debug.Log(startSwipe);
             }
-            StartCoroutine(ResetAfterTime(2.5f));
+
+            if (Input.GetMouseButtonUp (0)){
+                endSwipe = Camera.main.ScreenToViewportPoint (Input.mousePosition) * 2;
+                Vector2 swipe = startSwipe - endSwipe;
+                Debug.Log("End");
+                Debug.Log(swipe.y);
+                if(Math.Abs(swipe.y) > 0){
+                    Launch();
+                }
+                StartCoroutine(ResetAfterTime(2.5f));
+            }
         }
+        
+        // else{
+        //     Debug.Log("ball in motion");
+        // }
     }
 
     void Launch()
