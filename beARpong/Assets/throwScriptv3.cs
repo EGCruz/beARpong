@@ -14,7 +14,7 @@ public class throwScriptv3 : MonoBehaviour {
 	private Vector2 endSwipe;
 	private Vector3 originalPos;
 
-    public static int scoreValue=0; //reference to the ScoreText gameobject, set in editor
+    public static int scoreValue=0;
 	public Text scoreText;
     public Text scoreText2;
 
@@ -26,7 +26,7 @@ public class throwScriptv3 : MonoBehaviour {
         originalPos = ball.transform.position;
     }
 
-    void FixedUpdate(){
+    void Update(){
         if(Input.GetMouseButtonDown (0)){
             Debug.Log("Begin");
 
@@ -62,9 +62,10 @@ public class throwScriptv3 : MonoBehaviour {
         rb.AddForce (xforce, 100f, zforce, ForceMode.Force);
         Debug.Log("xForce="+xforce+", zForce="+zforce);
 
-        scoreValue++;
-        scoreText.text = "Attempts: " + scoreValue.ToString();
-        scoreText2.text = "Attempts: " + scoreValue.ToString();
+	        scoreValue++;
+	        scoreText.text = "Attempts: " + scoreValue.ToString();
+	        scoreText2.text = "Attempts: " + scoreValue.ToString();
+    	
     }
 
     public IEnumerator ResetAfterTime(float passtime){
