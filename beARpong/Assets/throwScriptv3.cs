@@ -41,7 +41,7 @@ public class throwScriptv3 : MonoBehaviour {
             if(Math.Abs(swipe.y) > 0){
                 Launch();
             }
-            StartCoroutine(ResetAfterTime(3f));
+            StartCoroutine(ResetAfterTime(2.5f));
         }
     }
 
