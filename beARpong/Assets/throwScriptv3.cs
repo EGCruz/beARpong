@@ -9,7 +9,7 @@ public class throwScriptv3 : MonoBehaviour {
     public Rigidbody rb;
     public Transform planeTrans;
 
-	public float forceMultiplier;
+	public float forceMultiplier = 150f;
     private Vector2 startSwipe;
 	private Vector2 endSwipe;
 	private Vector3 originalPos;
@@ -41,7 +41,9 @@ public class throwScriptv3 : MonoBehaviour {
     void Launch(){
         ball.GetComponent<Rigidbody>().isKinematic = false;
 		Vector2 swipe = startSwipe - endSwipe;
-		float xforce = (swipe.x * forceMultiplier);
+		float xforce = -(swipe.x * forceMultiplier);
+        if(-10f <= xforce && xforce <= 10f)
+            xforce = 0f;
 		float yforce = Math.Abs((swipe.y * forceMultiplier)/2);
         float tentativeZ = (Math.Abs(planeTrans.position.z - ball.transform.position.z) + 1.25f)*forceMultiplier;
         float zforce;

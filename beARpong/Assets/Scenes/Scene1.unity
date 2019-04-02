@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43753594, g: 0.4853719, b: 0.56564915, a: 1}
+  m_IndirectSpecularColor: {r: 0.4375358, g: 0.48537093, b: 0.56564856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &146135637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -582,10 +583,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05166626
@@ -641,6 +638,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -810,8 +811,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246343836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.006, z: -1.06}
-  m_LocalScale: {x: 0.25096565, y: 0.25096565, z: 0.34796387}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 896977321}
   m_RootOrder: 0
@@ -1018,6 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &305480639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1537,6 +1539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &660210484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1787,7 +1790,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1662969398}
+      - m_Target: {fileID: 0}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -1850,10 +1853,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.035
@@ -1910,6 +1909,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.08082442
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
 --- !u!1001 &763578536
@@ -1919,10 +1922,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.224
@@ -1978,6 +1977,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -2170,6 +2173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &784965034
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2294,6 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &847071000
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2571,6 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &1050985656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2777,6 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &1162928422
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3049,10 +3056,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.155
@@ -3108,6 +3111,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -3197,10 +3204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.323
@@ -3257,6 +3260,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.08082442
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
 --- !u!1001 &1568326368
@@ -3266,10 +3273,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.121
@@ -3325,6 +3328,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -3387,6 +3394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &1602176571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3439,10 +3447,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.216
@@ -3498,6 +3502,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -3603,13 +3611,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662969393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ff18d8509df7742acef0a8684068a0, type: 3}
+  m_Script: {fileID: 11500000, guid: caa84bc82c297f34e8f02282467b7718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 142988344}
-  throwForceInZ: 35
+  rb: {fileID: 1662969399}
+  planeTrans: {fileID: 246343840}
+  forceMultiplier: 150
   ball: {fileID: 1662969393}
-  throwButton: {fileID: 1730482621}
 --- !u!54 &1662969399
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3633,10 +3641,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.048
@@ -3692,6 +3696,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -3846,7 +3854,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1662969398}
+        - m_Target: {fileID: 0}
           m_MethodName: Hold
           m_Mode: 1
           m_Arguments:
@@ -3863,7 +3871,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1662969398}
+        - m_Target: {fileID: 0}
           m_MethodName: Release
           m_Mode: 1
           m_Arguments:
@@ -3956,6 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &1780675980
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4256,10 +4265,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.138
@@ -4315,6 +4320,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
@@ -4563,6 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ab51a2b93c5974bba04644ffaede16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!23 &1979319257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4750,10 +4760,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281682821}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
-      propertyPath: m_Name
-      value: CupV2 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05166626
@@ -4809,6 +4815,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08082442
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
+      propertyPath: m_Name
+      value: CupV2 (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7, type: 3}
