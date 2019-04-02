@@ -1722,7 +1722,6 @@ GameObject:
   - component: {fileID: 716772634}
   - component: {fileID: 716772633}
   - component: {fileID: 716772632}
-  - component: {fileID: 716772631}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -1750,20 +1749,6 @@ RectTransform:
   m_AnchoredPosition: {x: -127, y: -153.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &716772631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716772629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f67a2985411ca747a1bb05062c014e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas1: {fileID: 1070241189}
-  canvas2: {fileID: 260125705}
 --- !u!114 &716772632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,11 +3610,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662969393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdab7e819d62369439b412a1a116304a, type: 3}
+  m_Script: {fileID: 11500000, guid: a0ff18d8509df7742acef0a8684068a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   throwForceInZ: 35
   ball: {fileID: 1662969393}
+  throwButton: {fileID: 1730482621}
 --- !u!54 &1662969399
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3728,13 +3714,14 @@ GameObject:
   - component: {fileID: 1730482622}
   - component: {fileID: 1730482621}
   - component: {fileID: 1730482620}
+  - component: {fileID: 1730482624}
   m_Layer: 5
   m_Name: Throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1730482619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3808,18 +3795,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1730482622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1662969398}
-        m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1730482622
@@ -3859,6 +3835,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730482618}
   m_CullTransparentMesh: 0
+--- !u!114 &1730482624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730482618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1662969398}
+          m_MethodName: Hold
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1662969398}
+          m_MethodName: Release
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1770115348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8a8a7ffd64ddfcd419414dff995a23e7,
