@@ -26,7 +26,7 @@ public class throwScriptv3 : MonoBehaviour {
         originalPos = ball.transform.position;
     }
 
-    void Update(){
+    void FixedUpdate(){
         if(Input.GetMouseButtonDown (0)){
             Debug.Log("Begin");
 
