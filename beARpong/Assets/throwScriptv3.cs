@@ -30,9 +30,9 @@ public class throwScriptv3 : MonoBehaviour {
 
         if (Input.GetMouseButtonDown (0) && rb.isKinematic == true){
             
-                scoreValue++;
-                scoreText.text = "Attempts: " + scoreValue.ToString();
-                scoreText2.text = "Attempts: " + scoreValue.ToString();
+            scoreValue++;
+            scoreText.text = "Attempts: " + scoreValue.ToString();
+            scoreText2.text = "Attempts: " + scoreValue.ToString();
             
         }
     }
@@ -78,9 +78,9 @@ public class throwScriptv3 : MonoBehaviour {
         rb.AddForce (xforce, 100f, zforce, ForceMode.Force);
         Debug.Log("xForce="+xforce+", zForce="+zforce);
 
-	        // scoreValue++;
-	        // scoreText.text = "Attempts: " + scoreValue.ToString();
-	        // scoreText2.text = "Attempts: " + scoreValue.ToString();
+        // scoreValue++;
+        // scoreText.text = "Attempts: " + scoreValue.ToString();
+        // scoreText2.text = "Attempts: " + scoreValue.ToString();
     	
     }
 
