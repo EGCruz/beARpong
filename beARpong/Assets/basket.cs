@@ -21,10 +21,9 @@ public class basket : MonoBehaviour
 	void OnCollisionEnter() //if ball hits board
     {
         cups++;
-        Debug.Log(cups);
+        Debug.Log("cups="+cups);
 
-        Destroy (transform.parent.gameObject);
-        Destroy (gameObject);
+        Invoke("DestroyAfterTime",1.5f);
 
         //display win message after getting all cupss
         if(cups >= 10)
@@ -36,4 +35,10 @@ public class basket : MonoBehaviour
         }
             
     }
+
+    void DestroyAfterTime(){
+		Debug.Log("Cup Destroyed");
+        Destroy (transform.parent.gameObject);
+        Destroy (gameObject);
+	}
 }
