@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 
 public class throwScriptv3 : MonoBehaviour {
+    public GameObject parentCam;
     public Rigidbody rb;
     public Transform planeTrans;
 
@@ -78,7 +79,7 @@ public class throwScriptv3 : MonoBehaviour {
             zforce = tentativeZ;
         else
             zforce = yforce;
-
+        rb.transform.parent = null;
         rb.AddForce (xforce, 100f, zforce, ForceMode.Force);
         Debug.Log("xForce="+xforce+", zForce="+zforce);
 
@@ -91,6 +92,7 @@ public class throwScriptv3 : MonoBehaviour {
     public IEnumerator ResetAfterTime(float passtime){
 		yield return new WaitForSeconds(passtime);
 		Debug.Log("Reset");
+        rb.transform.parent = parentCam.transform;
 		rb.isKinematic = true;
 		// ball.transform.position = new Vector3(0.0f,-0.12f,0.383f);
 		ball.transform.localPosition = new Vector3(0.0f,-0.12f,0.383f);

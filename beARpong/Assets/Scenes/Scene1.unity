@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43753594, g: 0.4853719, b: 0.56564915, a: 1}
+  m_IndirectSpecularColor: {r: 0.4375358, g: 0.48537093, b: 0.56564856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4420,6 +4420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa84bc82c297f34e8f02282467b7718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCam: {fileID: 715626044}
   rb: {fileID: 1662969399}
   planeTrans: {fileID: 246343840}
   forceMultiplier: 150
